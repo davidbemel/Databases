@@ -18,3 +18,14 @@ Pretty-format 	\x
 Pasos para ingresar a Postgresql
 ```
 psql -u postgres -W -h localhost
+```
+
+Pasos para hacer el dump
+Respaldando:
+```
+> pg_dump -U [usuario] -W -x -O -d [base_de_datos] > [archivo.sql]
+```
+Recuperando
+```
+> psql -U [usuario] -W -d [base_de_datos_destino] < [archivo.sql]
+```
