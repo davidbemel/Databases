@@ -29,3 +29,16 @@ Recuperando
 ```
 > psql -U [usuario] -W -d [base_de_datos_destino] < [archivo.sql]
 ```
+# Monitoreo
+
+Número de Sesiones:
+
+psql> SELECT COUNT(*)FROM pg_stat_activity;
+
+Ver las sesiones activas:
+
+psql> SELECT COUNT(*)FROM pg_stat_activity;
+
+Matar una conexión:
+
+psql> SELECT pg_terminate_backend( [numero_sesion] );
