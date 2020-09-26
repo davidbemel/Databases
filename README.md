@@ -42,3 +42,17 @@ psql> SELECT COUNT(*)FROM pg_stat_activity;
 Matar una conexión:
 
 psql> SELECT pg_terminate_backend( [numero_sesion] );
+
+## importing
+
+
+    Exportando:
+
+    psql> COPY [tabla] TO '[archivo_csv]' DELIMITER ',' CSV HEADER;
+
+    Importando:
+
+    psql> COPY [tabla] FROM '[archivo_csv]' WITH (FORMAT csv);
+
+
+
